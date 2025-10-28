@@ -56,10 +56,10 @@ export default function AboutSection() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="bg-white/80 backdrop-blur-md border border-slate-100 shadow-sm rounded-2xl px-8 py-6 hover:shadow-md transition"
+              className="bg-red-800 backdrop-blur-md border border-slate-100 shadow-sm rounded-2xl px-8 py-6 hover:shadow-md transition"
             >
-              <h3 className="text-3xl font-bold text-slate-900">{stat.num}</h3>
-              <p className="text-gray-600 mt-1">{stat.label}</p>
+              <h3 className="text-3xl font-bold text-white">{stat.num}</h3>
+              <p className="text-white mt-1">{stat.label}</p>
             </div>
           ))}
         </motion.div>
@@ -105,7 +105,7 @@ export default function AboutSection() {
           className="mt-20 bg-white/90 border border-slate-100 rounded-2xl shadow-sm p-10 max-w-4xl mx-auto"
         >
           <h3 className="text-2xl font-semibold mb-4 flex items-center justify-center gap-3 text-slate-900">
-            <Users2 className="text-slate-700 w-7 h-7" /> Our Philosophy
+            <Users2 className="text-slate-700 w-7 h-7" /> What We Offer
           </h3>
           <p className="text-gray-700 leading-relaxed">
             At GNK Associates, we believe that great deals are built on <strong>trust, discretion, and expertise</strong>. 
@@ -161,7 +161,7 @@ export default function AboutSection() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="p-6 bg-slate-900 text-white rounded-xl shadow-lg"
+              className="p-6 bg-red-900 text-white rounded-xl shadow-lg"
             >
               <Handshake size={40} className="mx-auto mb-4" />
               <h4 className="text-xl font-semibold mb-2">Integrity</h4>
@@ -184,7 +184,7 @@ export default function AboutSection() {
 
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="p-6 bg-slate-900 text-white rounded-xl shadow-lg"
+              className="p-6 bg-red-900 text-white rounded-xl shadow-lg"
             >
               <ShieldCheck size={40} className="mx-auto mb-4" />
               <h4 className="text-xl font-semibold mb-2">Excellence</h4>

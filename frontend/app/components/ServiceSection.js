@@ -53,7 +53,7 @@ export default function ServiceSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             What We <span className="text-yellow-200">Offer</span>
           </h2>
-          <p className="text-yellow-500 mt-5 max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-yellow-200 mt-5 max-w-2xl mx-auto text-lg leading-relaxed">
             Strategic, confidential, and results-driven real estate advisory. We
             empower investors, owners, and developers with market intelligence
             and proven transaction expertise across India.
@@ -80,7 +80,7 @@ export default function ServiceSection() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="mx-auto mb-6 flex items-center justify-center w-16 h-16 bg-gradient-to-br from-slate-900 to-slate-700 text-white rounded-2xl shadow-md group-hover:from-[#bfa86f] group-hover:to-yellow-700 transition-all duration-500"
+                className="mx-auto mb-6 flex items-center justify-center w-16 h-16 bg-red-700 text-white rounded-2xl shadow-md group-hover:from-[#bfa86f] group-hover:to-yellow-700 transition-all duration-500"
               >
                 {service.icon}
               </motion.div>

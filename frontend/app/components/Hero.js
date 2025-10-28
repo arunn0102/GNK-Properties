@@ -168,7 +168,7 @@ export default function Hero() {
   return (
     <section
       ref={ref}
-      className="relative overflow-hidden bg-black py-20"
+      className="relative overflow-hidden bg-black py-10"
     >
       {/* 🎥 Background Video Layer */}
       <motion.video

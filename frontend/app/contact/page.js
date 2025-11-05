@@ -116,12 +116,12 @@ export default function ContactPage() {
             {
               icon: EnvelopeIcon,
               title: "Email",
-              text: "contact@gnkassociates.com",
+              text: "connectgnk@gmail.com",
             },
             {
               icon: MapPinIcon,
               title: "Office",
-              text: "Mumbai, Maharashtra, India",
+              text: "New Delhi, India",
             },
           ].map((info, i) => (
             <motion.div

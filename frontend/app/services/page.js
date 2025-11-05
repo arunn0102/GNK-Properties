@@ -234,18 +234,20 @@
 
 // app/services/page.js
 "use client";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  Building2,
-  Briefcase,
-  SunMedium,
-  Users2,
-  FileCheck2,
-  Handshake,
-  ShieldCheck,
-  LineChart,
-  TrendingUp,
+  // Building2,
+  // Briefcase,
+  // SunMedium,
+  // Users2,
+  // FileCheck2,
+  // Handshake,
+  // ShieldCheck,
+  // LineChart,
+  // TrendingUp,
   Award,
   Globe2,
   Sparkles,
@@ -253,6 +255,18 @@ import {
 import { services } from "@/data/services";
 
 export default function ServicesPage() {
+  
+const { data: session } = useSession();
+const router = useRouter();
+
+function handleViewDetails(slug) {
+  if (!session) {
+    router.push(`/login?next=/services/${slug}`);
+  } else {
+    router.push(`/services/${slug}`);
+  }
+}
+
   return (
     <main className="relative bg-gradient-to-b from-white via-slate-50 to-slate-100 overflow-hidden">
       {/* HERO SECTION */}
@@ -291,7 +305,7 @@ export default function ServicesPage() {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa?auto=format&fit=crop&w=1200&q=80"
+            src="/servicesbg.jpg"
             alt="About GNK Associates"
             className="rounded-3xl shadow-lg"
           />
@@ -317,7 +331,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/about"
-            className="inline-block px-6 py-3 bg-amber-700 text-white rounded-full shadow-md hover:shadow-lg hover:bg-amber-800 transition-all duration-300"
+            className="inline-block px-6 py-3 bg-gradient-to-r from-[#4c0000] via-[#7a0000] to-[#b30000] text-white rounded-full shadow-md hover:shadow-lg hover:bg-amber-800 transition-all duration-300"
           >
             Learn More About Us →
           </Link>
@@ -387,12 +401,13 @@ export default function ServicesPage() {
                 <p className="text-gray-600 text-base leading-relaxed mb-6">
                   {service.desc}
                 </p>
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="inline-block px-5 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-[#4c0000] via-[#7a0000] to-[#b30000] text-white shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
-                >
-                  View Details →
-                </Link>
+                <button
+  onClick={() => handleViewDetails(service.slug)}
+  className="inline-block px-5 py-2 text-sm font-medium rounded-full bg-gradient-to-r from-[#4c0000] via-[#7a0000] to-[#b30000] text-white shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+>
+  View Details →
+</button>
+
               </div>
             </motion.div>
           ))}
@@ -445,7 +460,7 @@ export default function ServicesPage() {
                 <h4 className="text-lg font-semibold text-slate-900">
                   {t.name}
                 </h4>
-                <p className="text-amber-600 text-sm">{t.title}</p>
+                <p className="text-red-600 text-sm">{t.title}</p>
               </motion.div>
             ))}
           </div>
@@ -466,7 +481,7 @@ export default function ServicesPage() {
           </motion.h3>
 
           <p className="text-amber-100 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
-            Partner with <strong>GNK Associates</strong> — your trusted advisor for
+            Partner with <strong>GNK Associates</strong> your trusted advisor for
             discreet, data-backed, and high-value transactions across India’s top
             investment opportunities.
           </p>

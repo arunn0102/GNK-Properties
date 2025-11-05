@@ -99,8 +99,8 @@ export default function Footer() {
 
             <div className="flex items-center justify-center md:justify-end gap-3">
               <Mail size={18} className="text-[#bfa86f]" />
-              <Link href="gnkpropertiesindia@gmail.com" className="hover:text-white transition">
-                gnkpropertiesindia@gmail.com
+              <Link href="connectgnk@gmail.com" className="hover:text-white transition">
+                connectgnk@gmail.com
               </Link>
             </div>
 
@@ -112,7 +112,7 @@ export default function Footer() {
       <div className="relative border-t border-white/10 mt-10 py-6 text-center text-sm text-gray-400 z-10">
         <p>
           © {new Date().getFullYear()}{" "}
-          <span className="text-white font-medium">GNK Associates</span> — Crafted with precision &
+          <span className="text-white font-medium">GNK Associates</span> Crafted with precision &
           passion.
         </p>
       </div>

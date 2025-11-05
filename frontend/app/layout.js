@@ -1,7 +1,7 @@
 import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-
+import Providers from "./Providers";
 
 export const metadata = {
 title: 'GNK Associates',
@@ -14,7 +14,9 @@ return (
 <html lang="en">
 <body className="bg-white text-slate-800">
 <Header />
-<main className="min-h-[70vh]">{children}</main>
+<Providers>
+          <main className="min-h-[70vh]">{children}</main>
+        </Providers>
 <Footer />
 </body>
 </html>

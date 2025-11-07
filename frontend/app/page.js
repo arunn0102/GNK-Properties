@@ -7,7 +7,7 @@ import ServiceSection from "./components/ServiceSection";
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="bg-white relative">
       {/* Hero Section */}
       <Hero />
 

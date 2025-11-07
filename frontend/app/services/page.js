@@ -234,9 +234,10 @@
 
 // app/services/page.js
 "use client";
-import { useSession } from "next-auth/react";
+import { useSession, signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { toast } from "react-hot-toast";
 import Link from "next/link";
 import {
   // Building2,
@@ -259,13 +260,26 @@ export default function ServicesPage() {
 const { data: session } = useSession();
 const router = useRouter();
 
+
+
+
 function handleViewDetails(slug) {
   if (!session) {
-    router.push(`/login?next=/services/${slug}`);
+    toast.error("Please login first to view service details!", {
+      style: {
+        borderRadius: "10px",
+        background: "#333",
+        color: "#fff",
+      },
+    });
+    setTimeout(() => {
+      router.push(`/login?next=/services/${slug}`);
+    }, 1200);
   } else {
     router.push(`/services/${slug}`);
   }
 }
+
 
   return (
     <main className="relative bg-gradient-to-b from-white via-slate-50 to-slate-100 overflow-hidden">
@@ -320,7 +334,7 @@ function handleViewDetails(slug) {
             Strategic. Reliable. Future-Ready.
           </h2>
           <p className="text-gray-700 text-lg leading-relaxed mb-6">
-            At GNK Associates, we don’t just close deals — we build legacies.
+            At GNK Associates, we don’t just close deals we build legacies.
             Our advisory approach merges market data, human insight, and global
             connectivity to craft solutions tailored for long-term growth.
           </p>

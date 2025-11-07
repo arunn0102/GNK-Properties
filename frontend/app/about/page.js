@@ -356,25 +356,18 @@ export default function AboutPage() {
 
   const team = [
     {
-      name: "Rohit Mehra",
-      role: "Founder & Managing Partner",
+      name: "Nishchay Kumar",
+      role: "Founder",
       image:
-        "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=800&q=80",
-      desc: "With 15+ years in real estate and hospitality, Rohit leads GNK with strategic foresight, integrity, and unmatched deal expertise.",
+        "/founder.jpg",
+      // desc: "With 15+ years in real estate and hospitality, Rohit leads GNK with strategic foresight, integrity, and unmatched deal expertise.",
     },
     {
-      name: "Priya Sharma",
-      role: "Director – Investment Advisory",
+      name: "Pranav Khadia",
+      role: "Co-Founder",
       image:
-        "https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=800&q=80",
-      desc: "Specializing in investor relations and asset valuation, Priya ensures clients achieve maximum value and seamless deal execution.",
-    },
-    {
-      name: "Arjun Kapoor",
-      role: "Head – Asset Transactions",
-      image:
-        "https://images.unsplash.com/photo-1603415526853-7a2b2c59e9d9?auto=format&fit=crop&w=800&q=80",
-      desc: "An expert in land, hospitality, and industrial assets, Arjun brings deep market intelligence and negotiation acumen.",
+        "/co-founder.jpg",
+      // desc: "Specializing in investor relations and asset valuation, Priya ensures clients achieve maximum value and seamless deal execution.",
     },
   ];
 
@@ -386,7 +379,7 @@ export default function AboutPage() {
   {/* Background with Parallax Zoom */}
   <motion.div
     initial={{ scale: 1 }}
-    animate={{ scale: 1.1 }}
+    animate={{ scale: 1.6 }}
     transition={{ duration: 15, repeat: Infinity, repeatType: "reverse" }}
     className="absolute inset-0 bg-[url('/aboutbg.jpg')] bg-cover bg-center brightness-[0.7]"
   ></motion.div>
@@ -416,7 +409,7 @@ export default function AboutPage() {
     </h1>
     <p className="max-w-2xl mx-auto text-gray-200 text-base sm:text-lg leading-relaxed">
       An independent real estate and asset advisory firm specializing in off-market hospitality, land,
-      industrial, and renewable energy transactions across India — built on trust, transparency, and
+      industrial, and renewable energy transactions across India built on trust, transparency, and
       excellence.
     </p>
   </motion.div>
@@ -461,7 +454,7 @@ export default function AboutPage() {
       <span className="font-semibold text-slate-900">verified property owners</span> with{" "}
       <span className="text-[#b30000] font-medium">serious buyers and investors</span> through a 
       confidential, professional, and data-driven approach. Our focus is on{" "}
-      <em>high-value assets</em> — hotels, resorts, commercial land, solar plants, and industrial properties — 
+      <em>high-value assets</em> hotels, resorts, commercial land, solar plants, and industrial properties
       offering end-to-end transaction support from{" "}
       <span className="font-semibold text-slate-900">sourcing to closure</span>.
     </p>
@@ -476,7 +469,7 @@ export default function AboutPage() {
     </p>
 
     <p>
-      Our role extends beyond traditional brokerage — we act as{" "}
+      Our role extends beyond traditional brokerage we act as{" "}
       <span className="text-[#b30000] font-semibold">trusted intermediaries</span> who simplify complex transactions, 
       structure win-win deals, and ensure seamless execution. Whether it’s the{" "}
       <em>sale of a 5-star hotel</em>, acquisition of a renewable energy project, or divestment of an 
@@ -512,7 +505,7 @@ export default function AboutPage() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
-              className="bg-gradient-to-br from-white to-slate-100 rounded-2xl shadow-lg border border-red-600 hover:shadow-2xl hover:scale-[1.02] transition-all p-10"
+              className="bg-gradient-to-br from-white to-slate-300 rounded-2xl shadow-lg border border-red-600 hover:shadow-2xl hover:scale-[1.02] transition-all p-10"
             >
               <h2 className="text-2xl font-semibold mb-4 flex items-center justify-center gap-3 text-slate-900">
                 {item.icon} {item.title}
@@ -541,7 +534,7 @@ export default function AboutPage() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeUp}
-              className="bg-white rounded-2xl shadow-md border border-red-500 hover:-translate-y-2 hover:shadow-xl transition-all duration-500 p-8 text-center"
+              className="bg-gradient-to-br from-white to-slate-300 rounded-2xl shadow-md border border-red-500 hover:-translate-y-2 hover:shadow-xl transition-all duration-500 p-8 text-center"
             >
               <div className="mx-auto mb-4 flex justify-center">{value.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-slate-900">
@@ -596,7 +589,7 @@ export default function AboutPage() {
           Meet Our Leadership
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-30 max-w-6xl mx-auto">
           {team.map((member, i) => (
             <motion.div
               key={i}
@@ -607,13 +600,15 @@ export default function AboutPage() {
               variants={fadeUp}
               className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-red-100"
             >
-              <div className="h-64 w-full overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="h-full w-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
+              <div className="relative w-full h-80 overflow-hidden rounded-2xl">
+  <img
+    src={member.image}
+    alt={member.name}
+    className="h-full w-full object-contain rounded-2xl transform transition-all duration-500 ease-out group-hover:scale-110 group-hover:brightness-110"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div>
+
               <div className="p-6 text-center">
                 <h3 className="text-xl font-semibold text-slate-900 mb-1">
                   {member.name}

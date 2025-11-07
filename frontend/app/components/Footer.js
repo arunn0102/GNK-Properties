@@ -23,7 +23,7 @@ export default function Footer() {
                 alt="GNK Associates Logo"
                 fill
                 className="object-contain drop-shadow-[0_0_12px_rgba(191,168,111,0.3)] group-hover:scale-105 transition-transform duration-300"
-                quality={100}
+                quality={75}
               />
             </div>
           </Link>

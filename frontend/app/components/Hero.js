@@ -171,16 +171,18 @@ export default function Hero() {
       className="relative overflow-hidden bg-black py-10"
     >
       {/* 🎥 Background Video Layer */}
-      <motion.video
-        style={{ y: y1 }}
-        className="absolute inset-0 w-full h-full object-cover opacity-40 brightness-90 contrast-110 saturate-125"
-        src="/hero.mp4" // ✅ your video inside /public folder
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-
+      <motion.div className="absolute inset-0">
+    <motion.video
+      style={{ y: y1 }}
+      className="relative w-full h-full object-cover opacity-40 brightness-90 contrast-110 saturate-125"
+      src="/hero.mp4"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
+  </motion.div>
+  
       {/* Overlay Gradient for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-transparent backdrop-blur-[1px]"></div>
 

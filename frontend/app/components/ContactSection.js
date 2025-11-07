@@ -83,7 +83,7 @@ export default function ContactSection() {
 
             {
               icon: <Mail size={26} className="text-slate-300" />,
-              title: "gnkpropertiesindia@gmail.com",
+              title: "connectgnk@gmail.com",
               subtitle: "Email Our Team",
             },
             {

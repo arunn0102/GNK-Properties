@@ -37,7 +37,7 @@ export default function AboutSection() {
         >
           GNK Associates is an independent <strong>real estate and asset advisory firm</strong> specializing in 
           <span className="text-slate-800 font-medium"> off-market hospitality, land, industrial, and renewable energy assets</span> across India. 
-          We connect verified property owners and serious investors through data-driven insights and trusted relationships — 
+          We connect verified property owners and serious investors through data-driven insights and trusted relationships
           ensuring confidentiality, transparency, and value creation at every step.
         </motion.p>
 
@@ -77,7 +77,7 @@ export default function AboutSection() {
             </h3>
             <p className="text-gray-600 leading-relaxed">
               To empower investors and property owners with <strong>trusted insights, confidential transactions,</strong> 
-              and transparent processes — ensuring every deal drives mutual growth and success.
+              and transparent processes ensuring every deal drives mutual growth and success.
             </p>
           </motion.div>
 
@@ -91,13 +91,13 @@ export default function AboutSection() {
               <Building2 className="text-slate-700 w-7 h-7" /> Our Vision
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              To be India’s most respected name in large-scale real estate transactions — 
+              To be India’s most respected name in large-scale real estate transactions
               where <strong>integrity meets opportunity</strong> and every partnership creates long-term value.
             </p>
           </motion.div>
         </div>
 
-        {/* Philosophy */}
+        {/* What We Offer */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -109,8 +109,7 @@ export default function AboutSection() {
           </h3>
           <p className="text-gray-700 leading-relaxed">
             At GNK Associates, we believe that great deals are built on <strong>trust, discretion, and expertise</strong>. 
-            Our approach combines data intelligence, deep market understanding, and ethical advisory practices 
-            — helping clients make informed decisions that create sustainable value.
+            Our approach combines data intelligence, deep market understanding, and ethical advisory practices helping clients make informed decisions that create sustainable value.
           </p>
         </motion.div>
 
